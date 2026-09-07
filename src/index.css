@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+  
+  .font-amiri {
+    font-family: 'Amiri', serif;
+  }
+
+  .font-cairo {
+    font-family: 'Cairo', sans-serif;
+  }
+}
+
+/* Print styles for authentic A4 administrative document export */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 15mm 20mm;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
